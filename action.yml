@@ -40,6 +40,9 @@ inputs:
   force-new-deployment:
     description: 'Whether to force a new deployment of the service. Valid value is "true". Will default to not force a new deployment.'
     required: false
+  max-attempts:
+    description: 'Total number of attempts (first attempt + additional retry attempts) to make AWS API in case of encountering network or rate-limit errors.  Default is 5.'
+    required: false
 outputs:
   task-definition-arn:
     description: 'The ARN of the registered ECS task definition'
